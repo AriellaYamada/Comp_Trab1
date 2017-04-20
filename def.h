@@ -1,0 +1,17 @@
+#define PROGRAM 1
+#define BEGIN 2
+#define END 3
+#define CONST 4
+#define VAR 5
+#define VAR_TYPE 6
+#define DC_P 7
+#define P_FALSE 8
+#define CMD 9
+#define ATTRIBUTION 10
+#define RELATION 11
+#define UN_OP 12
+#define OP_MUL 13
+#define IDENTIFIER 14
+#define INTEGER 15
+#define REAL 16
+#define SEMI_COLON 17

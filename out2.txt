@@ -1,0 +1,30 @@
+PROGRAM
+ IDENTIFIER
+SEMI_COLON
+unexpected character
+ unexpected character
+IDENTIFIER
+unexpected character
+unexpected character
+ VAR
+ IDENTIFIER
+ COLON
+ VAR_TYPE
+SEMI_COLON
+unexpected character
+ BEGIN
+unexpected character
+ IDENTIFIER
+unexpected character
+IDENTIFIER
+unexpected character
+unexpected character
+unexpected character
+INTEGER
+unexpected character
+SEMI_COLON
+unexpected character
+ END
+SEMI_COLON
+unexpected character
+ 

@@ -42,14 +42,7 @@ int main() {
           printf("Erro de sintaxe na linha %d, é esperado um identificador, mas foi encontrado %d\n", yylineno, yytext);
           return 1;
         }
-        auxtoken = yylex();
-        if(auxtoken == COLON){
-          auxtoken = yylex();
-          if(auxtoken != VAR_TYPE) {
-            printf("Erro de sintaxe na linha %d, é esperado um tipo de variável, mas foi encontrado %d\n", yylineno, yytext);
-            return 1;
-          }
-        }
+
         printf("Variável: %s\n", yytext);
 
     }

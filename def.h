@@ -1,5 +1,5 @@
 #define PROGRAM 1
-#define BEGIN 2
+#define begin 2
 #define END 3
 #define CONST 4
 #define VAR 5

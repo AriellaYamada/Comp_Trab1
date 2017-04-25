@@ -1,0 +1,18 @@
+SEMI_COLON
+unexpected character
+unexpected character
+unexpected character
+unexpected character
+COLON
+SEMI_COLON
+unexpected character
+unexpected character
+unexpected character
+unexpected character
+unexpected character
+unexpected character
+unexpected character
+SEMI_COLON
+unexpected character
+SEMI_COLON
+unexpected character

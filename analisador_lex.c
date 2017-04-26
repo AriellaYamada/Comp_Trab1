@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "def.h"
 
 extern int yylex();
@@ -6,6 +7,35 @@ extern int yylineno;
 extern char* yytext;
 
 char *names[] = {NULL, "program", "begin", "end", "const", "var", "real", "integer", "procedure", "else", "read", "write", "while", "if" };
+
+void ver_Erro(char *s) {
+	if(strstr(s, "program") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "begin") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "end") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "const") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "var") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "real") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "integer") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "procedure") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "else") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "read") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "write") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "while") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+	if(strstr(s, "if") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação\n");
+}
 
 int main() {
 
@@ -54,6 +84,7 @@ int main() {
 				printf("%s - Operador de multiplicação\n", yytext);
 				break;
 			case IDENTIFIER:
+				ver_Erro(yytext);
 				printf("%s - Identificador\n", yytext);
 				break;
 			case INTEGER:
@@ -61,6 +92,9 @@ int main() {
 				break;
 			case REAL:
 				printf("%s - Real\n", yytext);
+				break;
+			case QUOTES:
+				printf("%s - Aspas\n", yytext);
 				break;
 			case COMMA:
 				printf("%s - Vírgula\n", yytext);
@@ -74,7 +108,7 @@ int main() {
 			case PARENTHESES:
 				printf("%s - Parenteses\n", yytext);
 				break;
-			case BRACKETS:
+			case CURLY_BRACKETS:
 				printf("%s - Chaves\n", yytext);
 				break;
 			case SQUARE_BRACKETS:

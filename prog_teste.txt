@@ -3,4 +3,5 @@ program lalg;
 var a : integer;
 begin
 readd(a,@,1);
+"testes";
 end;

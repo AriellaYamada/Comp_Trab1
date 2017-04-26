@@ -14,4 +14,10 @@
 #define IDENTIFIER 14
 #define INTEGER 15
 #define REAL 16
-#define SEMI_COLON 17
+#define COMMA 17
+#define COLON 18
+#define SEMI_COLON 19
+#define PARENTHESES 20
+#define BRACKETS 21
+#define SQUARE_BRACKETS 22
+#define ERROR 23

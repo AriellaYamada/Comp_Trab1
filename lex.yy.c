@@ -386,14 +386,14 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[77] =
     {   0,
-        0,    0,   26,   24,   23,   23,    4,   19,   18,    1,
-       24,   21,    2,    3,   17,   16,   17,    6,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,    5,    0,   21,
-       17,   20,   20,   20,   20,   20,   15,   20,   20,   20,
-       20,   20,   20,   22,   20,   20,   20,    9,   20,   20,
-       20,   11,   20,   20,   20,   20,   14,   20,   20,   20,
-       12,   20,   20,    8,   10,   20,   20,   20,   20,   20,
-       20,   20,    7,   20,   13,    0
+        0,    0,   26,   24,   23,   23,   20,   13,   12,   17,
+       24,   15,   18,   19,   11,   10,   11,   22,   14,   14,
+       14,   14,   14,   14,   14,   14,   14,   21,    0,   15,
+       11,   14,   14,   14,   14,   14,    9,   14,   14,   14,
+       14,   14,   14,   16,   14,   14,   14,    3,   14,   14,
+       14,    5,   14,   14,   14,   14,    8,   14,   14,   14,
+        6,   14,   14,    2,    4,   14,   14,   14,   14,   14,
+       14,   14,    1,   14,    7,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -515,8 +515,10 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "teste.l"
-#line 520 "lex.yy.c"
+#line 1 "comp_trab1.l"
+#line 2 "comp_trab1.l"
+#include "def.h"
+#line 522 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -734,9 +736,9 @@ YY_DECL
 		}
 
 	{
-#line 1 "teste.l"
+#line 4 "comp_trab1.l"
 
-#line 740 "lex.yy.c"
+#line 742 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -795,131 +797,131 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 2 "teste.l"
-printf("COMMA\n");
+#line 5 "comp_trab1.l"
+return PROGRAM;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 3 "teste.l"
-printf("COLON\n");
+#line 6 "comp_trab1.l"
+return begin;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 4 "teste.l"
-printf("SEMI_COLON\n");
+#line 7 "comp_trab1.l"
+return END;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 5 "teste.l"
-printf("PARENTHESES\n");
+#line 8 "comp_trab1.l"
+return CONST;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 6 "teste.l"
-printf("BRACKETS\n");
+#line 9 "comp_trab1.l"
+return VAR;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 7 "teste.l"
-printf("SQUARE BRACKES\n");
+#line 10 "comp_trab1.l"
+return VAR_TYPE;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 8 "teste.l"
-printf("PROGRAM\n");
+#line 11 "comp_trab1.l"
+return DC_P;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 9 "teste.l"
-printf("BEGIN\n");
+#line 12 "comp_trab1.l"
+return P_FALSE;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 10 "teste.l"
-printf("END\n");
+#line 13 "comp_trab1.l"
+return CMD;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 11 "teste.l"
-printf("CONST\n");
+#line 14 "comp_trab1.l"
+return ATTRIBUTION;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 12 "teste.l"
-printf("VAR\n");
+#line 15 "comp_trab1.l"
+return RELATION;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 13 "teste.l"
-printf("VAR_TYPE\n");
+#line 16 "comp_trab1.l"
+return UN_OP;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 14 "teste.l"
-printf("DC_P\n");
+#line 17 "comp_trab1.l"
+return OP_MUL;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 15 "teste.l"
-printf("P_FALSE\n");
+#line 18 "comp_trab1.l"
+return IDENTIFIER;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 16 "teste.l"
-printf("CMD\n");
+#line 19 "comp_trab1.l"
+return INTEGER;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 17 "teste.l"
-printf("ATTRIBUTION\n");
+#line 20 "comp_trab1.l"
+return REAL;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 18 "teste.l"
-printf("RELATION\n");
+#line 21 "comp_trab1.l"
+return COMMA;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 19 "teste.l"
-printf("UN_OP\n");
+#line 22 "comp_trab1.l"
+return COLON;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 20 "teste.l"
-printf("OP_MUL\n");
+#line 23 "comp_trab1.l"
+return SEMI_COLON;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 21 "teste.l"
-printf("IDENTIFIER\n");
+#line 24 "comp_trab1.l"
+return PARENTHESES;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 22 "teste.l"
-printf("INTEGER\n");
+#line 25 "comp_trab1.l"
+return BRACKETS;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 23 "teste.l"
-printf("REAL\n");
+#line 26 "comp_trab1.l"
+return SQUARE_BRACKETS;
 	YY_BREAK
 case 23:
 /* rule 23 can match eol */
 YY_RULE_SETUP
-#line 24 "teste.l"
-printf(" ");
+#line 27 "comp_trab1.l"
+;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 26 "teste.l"
-printf("unexpected character\n");
+#line 28 "comp_trab1.l"
+return ERROR;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 27 "teste.l"
+#line 29 "comp_trab1.l"
 ECHO;
 	YY_BREAK
-#line 923 "lex.yy.c"
+#line 925 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1920,7 +1922,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "teste.l"
+#line 29 "comp_trab1.l"
 
 
 int yywrap(void)

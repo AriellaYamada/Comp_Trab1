@@ -13,39 +13,77 @@ int main() {
 
   ntoken = yylex();
   while(ntoken) {
-    printf("%d\n", ntoken);
-    vtoken = yylex();
     switch (ntoken) {
       case PROGRAM:
-        if(vtoken != IDENTIFIER) {
-          printf("Erro de sintaxe na linha %d, É esperado um identificador, mas foi encontrado %d\n", yylieno, yytext);
-          return 1;
-        }
-        printf("O nome do programa é %s\n", yytext);
+				printf("%s - Programa\n", yytext);
         break;
-      case BEGIN:
-        if(vtoken != CMD) {
-          printf("Erro de sintaxe na linha %d, é esperado um comando, mas foi encontrado %d\n", yylineno, yytext);
-          return 1;
-        }
-        printf("Comando: %s\n", yytext);
+      case begin:
+        printf("%s - Begin\n", yytext);
         break;
+			case END:
+				printf("%s - End\n", yytext);
+				break;
       case CONST:
-        if(vtoken != IDENTIFIER) {
-          printf("Erro de sintaxe na linha %d, é esperado um identificador, mas foi encontrado %d\n", yylineno, yytext);
-          return 1;
-        }
-        printf("Constante: %s\n", yytext);
+        printf("%s - Constante\n", yytext);
         break;
       case VAR:
-        if(vtoken != IDENTIFIER) {
-          printf("Erro de sintaxe na linha %d, é esperado um identificador, mas foi encontrado %d\n", yylineno, yytext);
-          return 1;
-        }
-
-        printf("Variável: %s\n", yytext);
-
-    }
+        printf("%s - Variável\n", yytext);
+				break;
+			case VAR_TYPE:
+				printf("%s - Tipo de variável\n", yytext);
+				break;
+			case DC_P:
+				printf("%s - procedure\n", yytext);
+				break;
+			case P_FALSE:
+				printf("%s - Else\n", yytext);
+				break;
+			case CMD:
+				printf("%s - Comando\n", yytext);
+				break;
+			case ATTRIBUTION:
+				printf("%s - Atribuição\n", yytext);
+			  break;
+			case RELATION:
+				printf("%s - Relação\n", yytext);
+				break;
+			case UN_OP:
+				printf("%s - Operador unário\n", yytext);
+				break;
+			case OP_MUL:
+				printf("%s - Operador de multiplicação\n", yytext);
+				break;
+			case IDENTIFIER:
+				printf("%s - Identificador\n", yytext);
+				break;
+			case INTEGER:
+				printf("%s - Inteiro\n", yytext);
+				break;
+			case REAL:
+				printf("%s - Real\n", yytext);
+				break;
+			case COMMA:
+				printf("%s - Vírgula\n", yytext);
+				break;
+			case COLON:
+				printf("%s - Dois pontos\n", yytext);
+				break;
+			case SEMI_COLON:
+				printf("%s - Ponto e vírgula\n", yytext);
+				break;
+			case PARENTHESES:
+				printf("%s - Parenteses\n", yytext);
+				break;
+			case BRACKETS:
+				printf("%s - Chaves\n", yytext);
+				break;
+			case SQUARE_BRACKETS:
+				printf("%s - Colchetes\n", yytext);
+				break;
+			default:
+				printf("%s - ERRO! Caractere não pertence a linguagem\n", yytext);
+			}
+			ntoken = yylex();
   }
 
   return 0;

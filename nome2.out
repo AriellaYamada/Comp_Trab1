@@ -1,0 +1,88 @@
+program - Programa
+nome2 - Identificador
+; - Ponto e vírgula
+{ - Chaves
+exemplo - Identificador
+2 - Inteiro
+} - Chaves
+var - Variável
+a - Identificador
+: - Dois pontos
+real - Tipo de variável
+; - Ponto e vírgula
+var - Variável
+b - Identificador
+: - Dois pontos
+integer - Tipo de variável
+; - Ponto e vírgula
+procedure - procedure
+nomep - Identificador
+( - Parenteses
+x - Identificador
+: - Dois pontos
+real - Tipo de variável
+) - Parenteses
+; - Ponto e vírgula
+var - Variável
+a - Identificador
+, - Vírgula
+c - Identificador
+: - Dois pontos
+integer - Tipo de variável
+; - Ponto e vírgula
+begin - Begin
+read - Comando
+( - Parenteses
+c - Identificador
+, - Vírgula
+a - Identificador
+) - Parenteses
+; - Ponto e vírgula
+if - Comando
+a - Identificador
+< - Relação
+x - Identificador
++ - Operador unário
+c - Identificador
+then - Identificador
+begin - Begin
+a - Identificador
+: - Dois pontos
+= - Atribuição
+c - Identificador
++ - Operador unário
+x - Identificador
+; - Ponto e vírgula
+write - Comando
+( - Parenteses
+a - Identificador
+) - Parenteses
+; - Ponto e vírgula
+end - End
+else - Else
+c - Identificador
+: - Dois pontos
+= - Atribuição
+a - Identificador
++ - Operador unário
+x - Identificador
+; - Ponto e vírgula
+end - End
+; - Ponto e vírgula
+begin - Begin
+{ - Chaves
+ATENÇÃO! Pode haver erros de digitação
+programa - Identificador
+principal - Identificador
+} - Chaves
+read - Comando
+( - Parenteses
+b - Identificador
+) - Parenteses
+; - Ponto e vírgula
+nomep - Identificador
+( - Parenteses
+b - Identificador
+) - Parenteses
+; - Ponto e vírgula
+end - End

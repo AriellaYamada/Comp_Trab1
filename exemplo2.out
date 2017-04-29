@@ -71,8 +71,7 @@ end - End
 ; - Ponto e vírgula
 begin - Begin
 { - Chaves
-ATENÇÃO! Pode haver erros de digitação
-programa - Identificador
+ATENÇÃO! Pode haver erros de digitação - programa - Identificador
 principal - Identificador
 } - Chaves
 read - Comando

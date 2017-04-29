@@ -31,7 +31,7 @@ while - Comando
 ( - Parenteses
 a1 - Identificador
 > - Relação
-0 - ERRO! Caractere não pertence a linguagem
+0 - Inteiro
 ) - Parenteses
 do - Identificador
 begin - Begin

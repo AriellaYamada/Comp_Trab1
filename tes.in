@@ -1,0 +1,9 @@
+program teste;
+var a : real;
+var b : integer;
+var r : real;
+begin;
+a = 3.2;
+b = 2;
+r = a + b;
+end;

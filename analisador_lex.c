@@ -10,31 +10,39 @@ char *names[] = {NULL, "program", "begin", "end", "const", "var", "real", "integ
 
 void ver_Erro(char *s) {
 	if(strstr(s, "program") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "begin") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "end") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "const") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "var") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "real") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "integer") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "procedure") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "else") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "read") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "write") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "while") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 	if(strstr(s, "if") != NULL)
-		printf("ATENÇÃO! Pode haver erros de digitação\n");
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
+	if(strstr(s, "wile") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
+	if(strstr(s, "whole") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
+	if(strstr(s, "proceddure") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
+	if(strstr(s, "vsr") != NULL)
+		printf("ATENÇÃO! Pode haver erros de digitação - ");
 }
 
 int main() {

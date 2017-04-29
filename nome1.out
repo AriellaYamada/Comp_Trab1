@@ -1,0 +1,88 @@
+program - Programa
+nome1 - Identificador
+; - Ponto e vírgula
+{ - Chaves
+exemplo - Identificador
+1 - Inteiro
+} - Chaves
+var - Variável
+a - Identificador
+, - Vírgula
+a1 - Identificador
+, - Vírgula
+b - Identificador
+: - Dois pontos
+integer - Tipo de variável
+; - Ponto e vírgula
+begin - Begin
+read - Comando
+( - Parenteses
+a - Identificador
+) - Parenteses
+; - Ponto e vírgula
+a1 - Identificador
+: - Dois pontos
+= - Atribuição
+a1 - Identificador
+* - Operador de multiplicação
+2 - Inteiro
+; - Ponto e vírgula
+while - Comando
+( - Parenteses
+a1 - Identificador
+> - Relação
+0 - ERRO! Caractere não pertence a linguagem
+) - Parenteses
+do - Identificador
+begin - Begin
+write - Comando
+( - Parenteses
+a1 - Identificador
+) - Parenteses
+; - Ponto e vírgula
+a1 - Identificador
+: - Dois pontos
+= - Atribuição
+a1 - Identificador
+- - Operador unário
+1 - Inteiro
+; - Ponto e vírgula
+end - End
+; - Ponto e vírgula
+for - Identificador
+b - Identificador
+: - Dois pontos
+= - Atribuição
+1 - Inteiro
+to - Identificador
+10 - Inteiro
+do - Identificador
+begin - Begin
+b - Identificador
+: - Dois pontos
+= - Atribuição
+b - Identificador
++ - Operador unário
+2 - Inteiro
+; - Ponto e vírgula
+a - Identificador
+: - Dois pontos
+= - Atribuição
+a - Identificador
+- - Operador unário
+1 - Inteiro
+; - Ponto e vírgula
+end - End
+; - Ponto e vírgula
+if - Comando
+a - Identificador
+<> - Relação
+b - Identificador
+then - Identificador
+write - Comando
+( - Parenteses
+a - Identificador
+) - Parenteses
+; - Ponto e vírgula
+end - End
+. - ERRO! Caractere não pertence a linguagem

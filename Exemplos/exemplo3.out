@@ -1,0 +1,36 @@
+program - Programa
+teste - Identificador
+; - Ponto e virgula
+var - Variavel
+a - Identificador
+: - Dois pontos
+real - Tipo de variavel
+; - Ponto e virgula
+var - Variavel
+b - Identificador
+: - Dois pontos
+integer - Tipo de variavel
+; - Ponto e virgula
+var - Variavel
+r - Identificador
+: - Dois pontos
+real - Tipo de variavel
+; - Ponto e virgula
+begin - Begin
+; - Ponto e virgula
+a - Identificador
+= - Atribuicao
+3.2 - Real
+; - Ponto e virgula
+b - Identificador
+= - Atribuicao
+2 - Inteiro
+; - Ponto e virgula
+r - Identificador
+= - Atribuicao
+a - Identificador
++ - Operador unario
+b - Identificador
+; - Ponto e virgula
+end - End
+; - Ponto e virgula

@@ -65,10 +65,10 @@ int main() {
         printf("%s - Constante\n", yytext);
         break;
       case VAR:
-        printf("%s - Variável\n", yytext);
+        printf("%s - Variavel\n", yytext);
 				break;
 			case VAR_TYPE:
-				printf("%s - Tipo de variável\n", yytext);
+				printf("%s - Tipo de variavel\n", yytext);
 				break;
 			case DC_P:
 				printf("%s - procedure\n", yytext);
@@ -80,16 +80,16 @@ int main() {
 				printf("%s - Comando\n", yytext);
 				break;
 			case ATTRIBUTION:
-				printf("%s - Atribuição\n", yytext);
+				printf("%s - Atribuicao\n", yytext);
 			  break;
 			case RELATION:
-				printf("%s - Relação\n", yytext);
+				printf("%s - Relacao\n", yytext);
 				break;
 			case UN_OP:
-				printf("%s - Operador unário\n", yytext);
+				printf("%s - Operador unario\n", yytext);
 				break;
 			case OP_MUL:
-				printf("%s - Operador de multiplicação\n", yytext);
+				printf("%s - Operador de multiplicacao\n", yytext);
 				break;
 			case IDENTIFIER:
 				ver_Erro(yytext);
@@ -105,13 +105,13 @@ int main() {
 				printf("%s - Aspas\n", yytext);
 				break;
 			case COMMA:
-				printf("%s - Vírgula\n", yytext);
+				printf("%s - Virgula\n", yytext);
 				break;
 			case COLON:
 				printf("%s - Dois pontos\n", yytext);
 				break;
 			case SEMI_COLON:
-				printf("%s - Ponto e vírgula\n", yytext);
+				printf("%s - Ponto e virgula\n", yytext);
 				break;
 			case PARENTHESES:
 				printf("%s - Parenteses\n", yytext);
@@ -123,7 +123,7 @@ int main() {
 				printf("%s - Colchetes\n", yytext);
 				break;
 			default:
-				printf("%s - ERRO! Caractere não pertence a linguagem\n", yytext);
+				printf("%s - ERRO! Caractere nao pertence a linguagem\n", yytext);
 			}
 			ntoken = yylex();
   }

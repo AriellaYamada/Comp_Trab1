@@ -1,74 +1,74 @@
 program - Programa
 nome2 - Identificador
-; - Ponto e vírgula
+; - Ponto e virgula
 { - Chaves
 exemplo - Identificador
 2 - Inteiro
 } - Chaves
-var - Variável
+var - Variavel
 a - Identificador
 : - Dois pontos
-real - Tipo de variável
-; - Ponto e vírgula
-var - Variável
+real - Tipo de variavel
+; - Ponto e virgula
+var - Variavel
 b - Identificador
 : - Dois pontos
-integer - Tipo de variável
-; - Ponto e vírgula
+integer - Tipo de variavel
+; - Ponto e virgula
 procedure - procedure
 nomep - Identificador
 ( - Parenteses
 x - Identificador
 : - Dois pontos
-real - Tipo de variável
+real - Tipo de variavel
 ) - Parenteses
-; - Ponto e vírgula
-var - Variável
+; - Ponto e virgula
+var - Variavel
 a - Identificador
-, - Vírgula
+, - Virgula
 c - Identificador
 : - Dois pontos
-integer - Tipo de variável
-; - Ponto e vírgula
+integer - Tipo de variavel
+; - Ponto e virgula
 begin - Begin
 read - Comando
 ( - Parenteses
 c - Identificador
-, - Vírgula
+, - Virgula
 a - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 if - Comando
 a - Identificador
-< - Relação
+< - Relacao
 x - Identificador
-+ - Operador unário
++ - Operador unario
 c - Identificador
 then - Identificador
 begin - Begin
 a - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 c - Identificador
-+ - Operador unário
++ - Operador unario
 x - Identificador
-; - Ponto e vírgula
+; - Ponto e virgula
 write - Comando
 ( - Parenteses
 a - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 end - End
 else - Else
 c - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 a - Identificador
-+ - Operador unário
++ - Operador unario
 x - Identificador
-; - Ponto e vírgula
+; - Ponto e virgula
 end - End
-; - Ponto e vírgula
+; - Ponto e virgula
 begin - Begin
 { - Chaves
 ATENÇÃO! Pode haver erros de digitação - programa - Identificador
@@ -78,10 +78,10 @@ read - Comando
 ( - Parenteses
 b - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 nomep - Identificador
 ( - Parenteses
 b - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 end - End

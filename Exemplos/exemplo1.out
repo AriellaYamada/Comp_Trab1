@@ -1,36 +1,36 @@
 program - Programa
 nome1 - Identificador
-; - Ponto e vírgula
+; - Ponto e virgula
 { - Chaves
 exemplo - Identificador
 1 - Inteiro
 } - Chaves
-var - Variável
+var - Variavel
 a - Identificador
-, - Vírgula
+, - Virgula
 a1 - Identificador
-, - Vírgula
+, - Virgula
 b - Identificador
 : - Dois pontos
-integer - Tipo de variável
-; - Ponto e vírgula
+integer - Tipo de variavel
+; - Ponto e virgula
 begin - Begin
 read - Comando
 ( - Parenteses
 a - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 a1 - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 a1 - Identificador
-* - Operador de multiplicação
+* - Operador de multiplicacao
 2 - Inteiro
-; - Ponto e vírgula
+; - Ponto e virgula
 while - Comando
 ( - Parenteses
 a1 - Identificador
-> - Relação
+> - Relacao
 0 - Inteiro
 ) - Parenteses
 do - Identificador
@@ -39,20 +39,20 @@ write - Comando
 ( - Parenteses
 a1 - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 a1 - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 a1 - Identificador
-- - Operador unário
+- - Operador unario
 1 - Inteiro
-; - Ponto e vírgula
+; - Ponto e virgula
 end - End
-; - Ponto e vírgula
+; - Ponto e virgula
 for - Identificador
 b - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 1 - Inteiro
 to - Identificador
 10 - Inteiro
@@ -60,29 +60,29 @@ do - Identificador
 begin - Begin
 b - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 b - Identificador
-+ - Operador unário
++ - Operador unario
 2 - Inteiro
-; - Ponto e vírgula
+; - Ponto e virgula
 a - Identificador
 : - Dois pontos
-= - Atribuição
+= - Atribuicao
 a - Identificador
-- - Operador unário
+- - Operador unario
 1 - Inteiro
-; - Ponto e vírgula
+; - Ponto e virgula
 end - End
-; - Ponto e vírgula
+; - Ponto e virgula
 if - Comando
 a - Identificador
-<> - Relação
+<> - Relacao
 b - Identificador
 then - Identificador
 write - Comando
 ( - Parenteses
 a - Identificador
 ) - Parenteses
-; - Ponto e vírgula
+; - Ponto e virgula
 end - End
-. - ERRO! Caractere não pertence a linguagem
+. - ERRO! Caractere nao pertence a linguagem

@@ -16,8 +16,8 @@
 "+"|"-"                     return UN_OP;
 "*"|"/"                     return OP_MUL;
 [a-z][a-z0-9]*              return IDENTIFIER;
-[0-9]*                      return INTEGER;
-[0-9]"."[0-9]               return REAL;
+[0-9]+                      return INTEGER;
+[0-9]+"."[0-9]+             return REAL;
 \"                          return QUOTES;
 "."                         return DOT;
 ,                           return COMMA;

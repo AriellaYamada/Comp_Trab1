@@ -52,7 +52,6 @@ void updateSymbolVal(char symbol, int val);
 %token SEMI_COLON
 %token OPEN_PARENTHESES
 %token CLOSE_PARENTHESES
-%token CURLY_BRACKETS
 %token SQUARE_BRACKETS
 %token ERROR
 

@@ -1,3 +1,9 @@
+/*
+  TODO LIST
+  - colocar todas as regras gramaticais
+  - salvar os identificadores e valores
+  - ao utilizar um identificador, verificar se o mesmo já existe
+*/
 %{
 void yyerror (char *s);
 #include <stdio.h>     /* C declarations used in actions */
@@ -22,7 +28,7 @@ void updateSymbolVal(char symbol, int val);
 %token CONST
 %token VAR
 %token VAR_TYPE
-%token DC_P
+%token PROCEDURE
 %token P_FALSE
 %token CMD
 %token ATTRIBUTION
@@ -37,7 +43,8 @@ void updateSymbolVal(char symbol, int val);
 %token COMMA
 %token COLON
 %token SEMI_COLON
-%token PARENTHESES
+%token OPEN_PARENTHESES
+%token CLOSE_PARENTHESES
 %token CURLY_BRACKETS
 %token SQUARE_BRACKETS
 %token ERROR
@@ -50,29 +57,67 @@ void updateSymbolVal(char symbol, int val);
 programa : PROGRAM IDENTIFIER SEMI_COLON corpo DOT        {exit(EXIT_SUCCESS);}
   ;
 
-corpo : dc BEGIN_ END
+corpo : dc BEGIN_ comandos END
   ;
 
 dc : dc_c dc_v dc_p
   ;
 
 dc_c : CONST IDENTIFIER ATTRIBUTION numero SEMI_COLON dc_c
-     |
+     | /* lambda */
   ;
 
-dc_v :
+dc_v : VAR variaveis COLON VAR_TYPE SEMI_COLON dc_v
+     | /* lambda */
   ;
 
-dc_p :
+variaveis : IDENTIFIER mais_var
+          | /* lambda */
+  ;
+
+mais_var : COMMA variaveis
+         | /* lambda */
+  ;
+
+dc_p : PROCEDURE IDENTIFIER parametros SEMI_COLON corpo_p dc_p
+     | /* lambda */
+  ;
+
+parametros : OPEN_PARENTHESES lista_par CLOSE_PARENTHESES
+           | /* lambda */
+  ;
+
+lista_par : variaveis COLON VAR_TYPE mais_par
+  ;
+
+mais_par : SEMI_COLON lista_par
+         | /* lambda */
+  ;
+
+corpo_p : dc_loc BEGIN_ comandos END SEMI_COLON
+        | /* lambda */
+  ;
+
+dc_loc : dc_v
+  ;
+
+/*
+lista_arg
+argumentos
+mais_ident
+pfalsa
+*/
+
+comandos : cmd SEMI_COLON comandos
+         | /* lambda */
+  ;
+
+cmd : /* lambda */
   ;
 
 numero : INTEGER
        | REAL
   ;
-
-comandos : "comandos"
-  ;
-
 
 /* regras da gramática de exemplo */
 

@@ -8,7 +8,7 @@
 "const"                     return CONST;
 "var"                       return VAR;
 "real"|"integer"            return VAR_TYPE;
-"procedure"                 return DC_P;
+"procedure"                 return PROCEDURE;
 "else"                      return P_FALSE;
 "read"|"write"|"while"|"if" return CMD;
 "="                         return ATTRIBUTION;
@@ -23,7 +23,8 @@
 ,                           return COMMA;
 :                           return COLON;
 ;                           return SEMI_COLON;
-"("|")"                     return PARENTHESES;
+"("                         return OPEN_PARENTHESES;
+")"                         return CLOSE_PARENTHESES;
 "{"|"}"                     return CURLY_BRACKETS;
 "["|"]"                     return SQUARE_BRACKETS;
 [ \r\t\n]                   ;

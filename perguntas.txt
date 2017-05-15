@@ -1,6 +1,6 @@
 Perguntas:
 	- Deve analisar espaços e ponto e vírgula
-	- Como vai funcionar o analisador léxico (programa em c)
+	- Como vai funcionar o analisador léxico(programa em c)
 	- O que é "%option nounput yylineno"?
 	- O que é extern int yylex();
 						extern int yylineno;

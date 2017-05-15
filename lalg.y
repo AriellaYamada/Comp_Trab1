@@ -3,6 +3,8 @@
   - colocar todas as regras gramaticais
   - salvar os identificadores e valores
   - ao utilizar um identificador, verificar se o mesmo já existe
+  - inclusão do comando 'for'
+  - tratamento de erros
 */
 %{
 void yyerror (char *s);
@@ -29,11 +31,16 @@ void updateSymbolVal(char symbol, int val);
 %token VAR
 %token VAR_TYPE
 %token PROCEDURE
-%token P_FALSE
-%token CMD
+%token CMD_READ
+%token CMD_WRITE
+%token CMD_WHILE
+%token CMD_DO
+%token CMD_IF
+%token CMD_THEN
+%token CMD_ELSE
 %token ATTRIBUTION
 %token RELATION
-%token UN_OP
+%token OP_AD
 %token OP_MUL
 %token IDENTIFIER
 %token INTEGER
@@ -101,18 +108,55 @@ corpo_p : dc_loc BEGIN_ comandos END SEMI_COLON
 dc_loc : dc_v
   ;
 
-/*
-lista_arg
-argumentos
-mais_ident
-pfalsa
-*/
+lista_arg : OPEN_PARENTHESES argumentos CLOSE_PARENTHESES
+          | /* lambda */
+  ;
+
+argumentos : IDENTIFIER mais_ident
+  ;
+
+mais_ident : SEMI_COLON argumentos
+           | /* lambda */
+  ;
+
+pfalsa : CMD_ELSE cmd
+       | /* lambda */
+  ;
 
 comandos : cmd SEMI_COLON comandos
          | /* lambda */
   ;
 
-cmd : /* lambda */
+cmd : CMD_READ OPEN_PARENTHESES variaveis CLOSE_PARENTHESES
+    | CMD_WRITE OPEN_PARENTHESES variaveis CLOSE_PARENTHESES
+    | CMD_WHILE OPEN_PARENTHESES condicao CMD_DO cmd
+    | CMD_IF condicao CMD_THEN cmd pfalsa
+    | IDENTIFIER ATTRIBUTION expressao
+    | IDENTIFIER lista_arg
+    | BEGIN_ comandos END
+  ;
+
+condicao : expressao RELATION expressao
+
+expressao : termo outros_termos
+
+op_un : OP_AD
+      | /* lambda */
+  ;
+
+outros_termos : OP_AD termo outros_termos
+              | /* lambda */
+  ;
+
+termo : op_un fator mais_fatores
+
+mais_fatores : OP_MUL fator mais_fatores
+             | /* lambda */
+  ;
+
+fator : IDENTIFIER
+      | numero
+      | OPEN_PARENTHESES expressao CLOSE_PARENTHESES
   ;
 
 numero : INTEGER

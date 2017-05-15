@@ -7,19 +7,76 @@ int symbolVal(char symbol);
 void updateSymbolVal(char symbol, int val);
 %}
 
-%union {int num; char id;}         /* Yacc definitions */
-%start line
-%token print
-%token exit_command
-%token <num> number
+%union {int num; char id;} /* estrutura que vai guardar os identificadores e valores */
+%start programa /* regra inicial */
+/* %token <num> number
 %token <id> identifier
-%type <num> line exp term 
-%type <id> assignment
+%type <num> line exp term
+%type <id> assignment */
+
+/* tokens que estavam em def.h agora são definidos aqui */
+/* o yacc gera o y.tab.h que substitui o def.h */
+%token PROGRAM
+%token BEGIN_
+%token END
+%token CONST
+%token VAR
+%token VAR_TYPE
+%token DC_P
+%token P_FALSE
+%token CMD
+%token ATTRIBUTION
+%token RELATION
+%token UN_OP
+%token OP_MUL
+%token IDENTIFIER
+%token INTEGER
+%token REAL
+%token QUOTES
+%token DOT
+%token COMMA
+%token COLON
+%token SEMI_COLON
+%token PARENTHESES
+%token CURLY_BRACKETS
+%token SQUARE_BRACKETS
+%token ERROR
+
 
 %%
 
-/* descriptions of expected inputs     corresponding actions (in C) */
+/* regras da gramática */
 
+programa : PROGRAM IDENTIFIER SEMI_COLON corpo DOT        {exit(EXIT_SUCCESS);}
+  ;
+
+corpo : dc BEGIN_ END
+  ;
+
+dc : dc_c dc_v dc_p
+  ;
+
+dc_c : CONST IDENTIFIER ATTRIBUTION numero SEMI_COLON dc_c
+     |
+  ;
+
+dc_v :
+  ;
+
+dc_p :
+  ;
+
+numero : INTEGER
+       | REAL
+  ;
+
+comandos : "comandos"
+  ;
+
+
+/* regras da gramática de exemplo */
+
+/*
 line    : assignment ';'    {;}
     | exit_command ';'    {exit(EXIT_SUCCESS);}
     | print exp ';'     {printf("Printing %d\n", $2);}
@@ -37,7 +94,7 @@ exp     : term                  {$$ = $1;}
 term    : number                {$$ = $1;}
     | identifier      {$$ = symbolVal($1);} 
         ;
-
+*/
 %%                     /* C code */
 
 int computeSymbolIndex(char token)

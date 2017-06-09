@@ -9,16 +9,17 @@ extern FILE* yyin;
 
 int main (int argc, char* argv[]) {
 
+  // verifica se há um nome de arquivo passado como argumento
   if (argc < 2) {
     printf("É necessário passar o nome do arquivo como argumento.\n");
     return -1;
   }
 
   int ntoken, vtoken;
-  int hasLexicalError = 0;
-  yyin = fopen(argv[1], "r");
+  int hasLexicalError = 0; // flag que identifica se encontrou erro léxico
+  yyin = fopen(argv[1], "r"); // define que a entrada será de um arquivo e nao do stdin
 
-  printf("Iniciando analise lexica!\n");
+  printf("*** Iniciando analise lexica! ***\n");
   ntoken = yylex();
   while (ntoken) {
     hasLexicalError = 0;
@@ -40,9 +41,6 @@ int main (int argc, char* argv[]) {
         break;
       case VAR_TYPE:
         printf("%s - Tipo de variavel\n", yytext);
-        break;
-      case PROCEDURE:
-        printf("%s - Procedimento\n", yytext);
         break;
       case PROCEDURE:
         printf("%s - Procedimento\n", yytext);
@@ -114,6 +112,7 @@ int main (int argc, char* argv[]) {
         printf("%s - Fecha parenteses\n", yytext);
         break;
       case ERROR:
+        // se erro, seta a flag como 1(true)
         hasLexicalError = 1;
         break;
       }
@@ -124,14 +123,14 @@ int main (int argc, char* argv[]) {
       }
       ntoken = yylex();
   }
-  printf("Analise lexica finalizada com sucesso!\n");
+  printf("*** Analise lexica finalizada com sucesso! ***\n\n");
 
   yylineno = 1; // reseta a contagem do número da linha
   rewind(yyin); // reseta o ponteiro do arquivo para o inicio do mesmo
 
-  printf("Iniciando analise sintatica!\n");
+  printf("*** Iniciando analise sintatica! ***\n");
   if (parse() == 0) {
-    printf("Analise sintatica finalizada com sucesso!\n");
+    printf("*** Analise sintatica finalizada com sucesso! ***\n");
     fclose (yyin);
     return 0;
   } else {

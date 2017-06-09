@@ -1,6 +1,9 @@
 %{
   #include "y.tab.h"
 %}
+
+%option yylineno
+
 %%
 "program"                   return PROGRAM;
 "begin"                     return BEGIN_;
@@ -30,10 +33,9 @@
 ;                           return SEMI_COLON;
 "("                         return OPEN_PARENTHESES;
 ")"                         return CLOSE_PARENTHESES;
-"["|"]"                     return SQUARE_BRACKETS;
 "{"[^\n]*"}"                ; // ignorar comentários
 [ \r\t\n]                   ;
-.                           return ERROR;
+.                           {printf("Linha %d: '%s' não pertence à linguagem.\n", yylineno, yytext); return ERROR;}
 %%
 int yywrap(void)
 {

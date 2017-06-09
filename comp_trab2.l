@@ -36,7 +36,7 @@
 ")"                         return CLOSE_PARENTHESES;
 "{"[^\n]*"}"                ; // ignorar comentários
 [ \r\t\n]                   ;
-.                           {printf("Linha %d: '%s' não pertence à linguagem.\n", yylineno, yytext); return ERROR;}
+.                           {printf("ERRO: Linha %d - Encontrado: '%s'.\n", yylineno, yytext); return ERROR;}
 %%
 int yywrap(void)
 {

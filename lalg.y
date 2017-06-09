@@ -1,9 +1,5 @@
-/*
-  TODO LIST
-  - inclusão do comando 'for'
-  - tratamento de erros
-*/
 %{
+int parse (void);
 void yyerror (char *s);
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,7 +41,7 @@ void yyerror (char *s);
 
 /* regras da gramática */
 
-programa : PROGRAM IDENTIFIER SEMI_COLON corpo DOT        {exit(EXIT_SUCCESS);}
+programa : PROGRAM IDENTIFIER SEMI_COLON corpo DOT        {return 0;}
   ;
 
 corpo : dc BEGIN_ comandos END
@@ -150,7 +146,7 @@ numero : INTEGER
 
 %% /* C code */
 
-int main (void) {
+int parse (void) {
   return yyparse ( );
 }
 

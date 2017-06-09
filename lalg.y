@@ -33,7 +33,6 @@ void yyerror (char *s);
 %token IDENTIFIER
 %token INTEGER
 %token REAL
-%token QUOTES
 %token DOT
 %token COMMA
 %token COLON

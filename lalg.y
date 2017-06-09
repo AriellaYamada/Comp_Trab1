@@ -20,6 +20,8 @@ void yyerror (char *s);
 %token CMD_READ
 %token CMD_WRITE
 %token CMD_WHILE
+%token CMD_FOR
+%token TO
 %token CMD_DO
 %token CMD_IF
 %token CMD_THEN
@@ -113,6 +115,7 @@ comandos : cmd SEMI_COLON comandos
 cmd : CMD_READ OPEN_PARENTHESES variaveis CLOSE_PARENTHESES
     | CMD_WRITE OPEN_PARENTHESES variaveis CLOSE_PARENTHESES
     | CMD_WHILE OPEN_PARENTHESES condicao CLOSE_PARENTHESES CMD_DO cmd
+    | CMD_FOR IDENTIFIER ATTRIBUTION INTEGER TO INTEGER CMD_DO BEGIN_ comandos END
     | CMD_IF condicao CMD_THEN cmd pfalsa
     | IDENTIFIER ATTRIBUTION expressao
     | IDENTIFIER lista_arg

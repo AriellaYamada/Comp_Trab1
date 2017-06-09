@@ -15,6 +15,8 @@
 "read"                      return CMD_READ;
 "write"                     return CMD_WRITE;
 "while"                     return CMD_WHILE;
+"for"                       return CMD_FOR;
+"to"                        return TO;
 "do"                        return CMD_DO;
 "if"                        return CMD_IF;
 "then"                      return CMD_THEN;
